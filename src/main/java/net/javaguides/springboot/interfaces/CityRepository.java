@@ -1,11 +1,11 @@
 package net.javaguides.springboot.interfaces;
 
-import net.javaguides.springboot.entities.Country;
+import net.javaguides.springboot.entities.City;
 import net.javaguides.springboot.entities.State;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
-public interface StateRepository extends JpaRepository<State, Long> {
-    List<State> findStateByCountry(Country countryID);
+public interface CityRepository extends JpaRepository<City, Long> {
+    List<City> findByState(State state);
 }

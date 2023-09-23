@@ -32,19 +32,19 @@ INSERT INTO Country (country_name) VALUES ('India');
 -- Add more countries as needed
 
 -- Insert test data into the States table
-INSERT INTO State (state_name, countryid) VALUES ('New York', 1); -- Associate with USA
-INSERT INTO State (state_name, countryid) VALUES ('California', 1); -- Associate with USA
-INSERT INTO State (state_name, countryid) VALUES ('Ontario', 2); -- Associate with Canada
-INSERT INTO State (state_name, countryid) VALUES ('Karnataka', 3); -- Associate with India
+INSERT INTO State (state_name, country_id) VALUES ('New York', 1); -- Associate with USA
+INSERT INTO State (state_name, country_id) VALUES ('California', 1); -- Associate with USA
+INSERT INTO State (state_name, country_id) VALUES ('Ontario', 2); -- Associate with Canada
+INSERT INTO State (state_name, country_id) VALUES ('Karnataka', 3); -- Associate with India
 -- Add more states as needed
 
 -- Insert test data into the Cities table
-INSERT INTO Cities (CityName, StateID) VALUES ('New York City', 1); -- Associate with New York
-INSERT INTO Cities (CityName, StateID) VALUES ('Los Angeles', 2); -- Associate with California
-INSERT INTO Cities (CityName, StateID) VALUES ('Toronto', 3); -- Associate with Ontario
-INSERT INTO Cities (CityName, StateID) VALUES ('Bangalore', 4); -- Associate with Karnataka
+INSERT INTO City (city_name, state_id) VALUES ('New York City', 1); -- Associate with New York
+INSERT INTO City (city_name, state_id) VALUES ('Los Angeles', 2); -- Associate with California
+INSERT INTO City (city_name, state_id) VALUES ('Toronto', 3); -- Associate with Ontario
+INSERT INTO City (city_name, state_id) VALUES ('Bangalore', 4); -- Associate with Karnataka
 -- Add more cities as needed
 
-SELECT * FROM Country
-SELECT * FROM City
-SELECT * FROM State
+SELECT * FROM [DBCOUNTRIES].[dbo].[country]
+SELECT * FROM [DBCOUNTRIES].[dbo].[state]
+SELECT * FROM [DBCOUNTRIES].[dbo].[city]

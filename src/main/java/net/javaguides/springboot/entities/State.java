@@ -10,14 +10,16 @@ public class State {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter @Setter
+    @Column(name = "state_id")
     private Long id;
 
     @Getter @Setter
-    private String stateName;
+    @Column(name = "state_name")
+    private String name;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "country_id")
     @Getter @Setter
-    private Country countryId;
+    private Country country;
 
 }
